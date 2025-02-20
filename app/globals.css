@@ -2,20 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+.gradient-bg {
+  background: linear-gradient(to right, #2196f3, #1976d2, #0d47a1);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+/* Custom container utility */
+.container-custom {
+  @apply max-w-[95%] xl:max-w-[85%] 2xl:max-w-[70%] mx-auto;
 }
