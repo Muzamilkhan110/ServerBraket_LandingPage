@@ -16,10 +16,12 @@ const Cards: React.FC<CardsProps> = ({
   description,
   className = "",
 }) => {
-  return <div className="shadow-lg ">
-        <div className="bg-slate-100 rounded-xl p-4 ">
-        <Image src={imageSrc} alt={imageAlt} className={` bg-white rounded-xl ${className}`} width={300} height={10}/>
-        <div className="pt-3">
+  return <div className="shadow-lg rounded-xl">
+        <div className="bg-slate-100 rounded-xl p-4 " >
+          <div>
+        <Image src={imageSrc} alt={imageAlt} className={` bg-white rounded-xl  ${className}`} width={300} height={10}/>
+          </div>
+        <div className="pt-3 ">
             <h2 className="text-lg font-bold my-3">{title}</h2>
             <p className="text-sm text-neutral-700">{description}</p>
         </div>

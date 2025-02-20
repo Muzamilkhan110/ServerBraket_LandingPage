@@ -48,7 +48,7 @@ const ProductCard = () => {
   return (
     <div className="container-custom m-auto py-8">
       <div className="rounded-md">
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2  gap-10 md:grid-cols-3">
           {data.map((item, index) => (
             <div
               key={index}
