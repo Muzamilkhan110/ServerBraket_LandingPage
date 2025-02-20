@@ -53,7 +53,7 @@ const Index = () => {
               className="mt-6 bg-sky-950 text-xs text-white py-2 px-4 rounded-lg hover:bg-opacity-80 transition"
             />
           </div>
-          {/* 🖼 Image - Initially Hidden, Scroll Pe Full Dikhne Lage */}
+        
           <div className="flex justify-center mt-8 relative overflow-hidden h-40 md:h-64">
             <Image
               className={`rounded-xl transition-all duration-700 ${
