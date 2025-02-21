@@ -8,7 +8,7 @@
 
 /* Custom container utility */
 .container-custom {
-  @apply max-w-[95%] xl:max-w-[85%] 2xl:max-w-[70%] mx-auto;
+  @apply max-w-[97%]  mx-auto;
 }
 .gradient-bg-1 {
   background: linear-gradient(to right, #164e7c, #05417d, #3574d1);
