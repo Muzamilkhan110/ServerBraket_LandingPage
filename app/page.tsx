@@ -17,7 +17,6 @@ export default function Home() {
       <SolutionSection />
       <KeyFeatures />
       <SupportedTechnologies />
-      {/* <ProductCard /> */}
       <PricingCard />
       <FAQ />
       <Indexe />
