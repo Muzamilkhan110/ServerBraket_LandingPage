@@ -13,3 +13,9 @@
 .gradient-bg-1 {
   background: linear-gradient(to right, #164e7c, #05417d, #3574d1);
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600&display=swap');
+
+body {
+  font-family: theme("fontFamily.grotesk"); /* 👈 Tailwind Class Apply */
+}

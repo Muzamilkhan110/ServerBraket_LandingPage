@@ -12,6 +12,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        grotesk: ["Space Grotesk", "sans-serif"], // 👈 Custom Font
+      },
     },
   },
   plugins: [],
