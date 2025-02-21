@@ -1,22 +1,36 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { FaNodeJs, FaPython, FaPhp, FaReact, FaJava, FaDocker, FaDatabase, FaGitAlt } from "react-icons/fa"; // Icons for Technologies
-import { SiMongodb, SiPostgresql, SiKubernetes, SiNginx, SiNextdotjs } from "react-icons/si";
+import {
+  FaNodeJs,
+  FaPython,
+  FaPhp,
+  FaReact,
+  FaJava,
+  FaDocker,
+  FaDatabase,
+  FaGitAlt,
+} from "react-icons/fa"; // Icons for Technologies
+import {
+  SiMongodb,
+  SiPostgresql,
+  SiKubernetes,
+  SiNginx,
+  SiNextdotjs,
+  SiFastapi,
+  SiDjango,
+  SiFlask,
+  SiWordpress,
+} from "react-icons/si";
 
 const technologiesData = [
   { id: 1, Icon: FaNodeJs, name: "Node.js", color: "text-green-500" },
   { id: 2, Icon: FaPython, name: "Python", color: "text-blue-500" },
   { id: 3, Icon: FaPhp, name: "PHP", color: "text-purple-500" },
-  { id: 4, Icon: FaJava, name: "Java", color: "text-red-500" },
-  { id: 5, Icon: FaReact, name: "React.js", color: "text-blue-400" },
-  { id: 6, Icon: SiNextdotjs, name: "Next.js", color: "text-black" },
-  { id: 7, Icon: FaDatabase, name: "SQL & NoSQL", color: "text-gray-600" },
-  { id: 8, Icon: SiMongodb, name: "MongoDB", color: "text-green-600" },
-  { id: 9, Icon: SiPostgresql, name: "PostgreSQL", color: "text-blue-600" },
-  { id: 10, Icon: FaDocker, name: "Docker", color: "text-blue-500" },
-  { id: 11, Icon: SiKubernetes, name: "Kubernetes", color: "text-blue-700" },
-  { id: 12, Icon: SiNginx, name: "Nginx", color: "text-green-700" },
-  { id: 13, Icon: FaGitAlt, name: "Git", color: "text-orange-500" },
+  { id: 4, Icon: SiFastapi, name: "FastAPI", color: "#009485" },
+  { id: 5, Icon: SiDjango, name: "Django", color: "text-green-950" },
+  { id: 6, Icon: SiWordpress, name: "Wordpress", color: "text-blue-500" },
+  { id: 7, Icon: SiFlask, name: "Flask", color: "text-blue-500" },
+
 ];
 
 const SupportedTechnologies = () => {
@@ -58,7 +72,9 @@ const SupportedTechnologies = () => {
             <div
               key={id}
               className={`bg-white p-6 rounded-lg shadow-lg shadow-black text-center text-gray-900 transform transition-all duration-700 hover:scale-110 hover:shadow-xl flex flex-col items-center justify-center ${
-                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
               }`}
             >
               <Icon className={`w-12 h-12 ${color}`} />
