@@ -3,7 +3,14 @@ import React, { useState } from "react";
 import Image from "next/image";
 import { Menu, X } from "lucide-react";
 
-const sections = ["home", "features", "solution-section", "supported-technologies", "faq", "contact"];
+const sections = [
+  "home",
+  "features",
+  "solution-section",
+  "supported-technologies",
+  "faq",
+  "contact",
+];
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,7 +22,7 @@ const Navbar = () => {
       if (section) {
         section.scrollIntoView({ behavior: "smooth", block: "start" });
         setActiveSection(id.toLowerCase());
-        setIsOpen(false); // Close sidebar after clicking a section
+        setIsOpen(false);
       }
     });
   };
@@ -23,11 +30,8 @@ const Navbar = () => {
   return (
     <nav className="container-custom m-auto">
       <div className="bg-white shadow-lg flex justify-between items-center px-5 rounded-lg my-2 p-4 relative">
-        {/* Logo */}
         <Image src="/Logo.png" alt="Logo" width={100} height={50} />
-
-        {/* Desktop Menu */}
-        <div className="hidden lg:flex gap-6 text-gray-700 font-medium">
+        <div className="hidden lg:flex gap-6 text-gray-700 font-medium font-grotesk">
           {sections.map((section) => (
             <button
               key={section}
@@ -36,7 +40,8 @@ const Navbar = () => {
                 activeSection === section.toLowerCase() ? "text-sky-900" : ""
               }`}
             >
-              {section.replace("-", " ").charAt(0).toUpperCase() + section.replace("-", " ").slice(1)}
+              {section.replace("-", " ").charAt(0).toUpperCase() +
+                section.replace("-", " ").slice(1)}
               {activeSection === section.toLowerCase() && (
                 <span className="absolute left-0 bottom-0 w-full h-[2px] bg-sky-900"></span>
               )}
@@ -44,13 +49,11 @@ const Navbar = () => {
           ))}
         </div>
 
-        {/* Mobile Menu Toggle */}
         <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
         </button>
       </div>
 
-      {/* Side Navbar for Mobile */}
       <div
         className={`fixed top-0 right-0 h-full w-64 bg-white shadow-lg z-50 transform transition-transform duration-300 ease-in-out ${
           isOpen ? "translate-x-0" : "translate-x-full"
@@ -69,7 +72,8 @@ const Navbar = () => {
               onClick={() => handleScroll(section)}
               className="block w-full text-left py-2 px-4 hover:bg-gray-200 rounded-md"
             >
-              {section.replace("-", " ").charAt(0).toUpperCase() + section.replace("-", " ").slice(1)}
+              {section.replace("-", " ").charAt(0).toUpperCase() +
+                section.replace("-", " ").slice(1)}
             </button>
           ))}
         </div>
