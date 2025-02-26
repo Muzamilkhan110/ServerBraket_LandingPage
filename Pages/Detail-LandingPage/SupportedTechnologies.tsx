@@ -71,7 +71,7 @@ const SupportedTechnologies = () => {
           {technologiesData.map(({ id, Icon, name, color }) => (
             <div
               key={id}
-              className={`bg-white p-6 rounded-lg shadow-lg shadow-black text-center text-gray-900 transform transition-all duration-700 hover:scale-110 hover:shadow-xl flex flex-col items-center justify-center ${
+              className={`bg-white p-6 rounded-lg shadow-sm shadow-black text-center text-gray-900 transform transition-all duration-700 hover:scale-110 hover:shadow-xl flex flex-col items-center justify-center ${
                 isVisible
                   ? "opacity-100 translate-y-0"
                   : "opacity-0 translate-y-10"

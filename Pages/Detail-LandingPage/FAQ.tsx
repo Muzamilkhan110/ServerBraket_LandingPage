@@ -39,7 +39,7 @@ const FAQSection = () => {
         {faqsData.map((faq, index) => (
           <div
             key={index}
-            className="border border-gray-300 rounded-lg overflow-hidden shadow-md shadow-sky-900 transition-all duration-300"
+            className="border border-gray-300 rounded-lg overflow-hidden shadow-sm shadow-sky-900 transition-all duration-300"
           >
             <button
               className="w-full flex justify-between items-center p-4 bg-white hover:bg-gray-100 transition-all"

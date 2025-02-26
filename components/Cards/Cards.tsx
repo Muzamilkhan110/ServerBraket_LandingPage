@@ -16,7 +16,7 @@ const Cards: React.FC<CardsProps> = ({
   description,
   className = "",
 }) => {
-  return <div className="shadow-lg rounded-xl">
+  return <div className="shadow-md rounded-xl">
         <div className="bg-slate-100 rounded-xl p-4 " >
           <div>
         <Image src={imageSrc} alt={imageAlt} className={` bg-white rounded-xl  ${className}`} width={300} height={10}/>

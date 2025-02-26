@@ -1,75 +1,64 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import Image from "next/image";
+import { motion } from "framer-motion";
 import Link from "next/link";
-import { Facebook, Twitter, Linkedin, Github } from "lucide-react";
+import { FaFacebook, FaTwitter, FaLinkedin } from "react-icons/fa";
+import Image from "next/image";
 
 const Footer = () => {
-  const [isVisible, setIsVisible] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsVisible(true);
-    }, 300); 
-  }, []);
-
   return (
-    <footer
-      className={`container-custom gradient-bg rounded-xl text-white py-10 mt-16 transition-all duration-1000 ease-in-out ${
-        isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-      }`}
+    <motion.footer
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.5 }}
+      className="gradient-bg container-custom m-auto rounded-md text-white py-8 px-6 md:px-12"
     >
-        
-      <div className="container-custom m-auto px-6 flex flex-col md:flex-row justify-between items-start">
-        
-        {/* Right Side - Quick Links */}
-        <div
-          className={`mt-6 md:mt-0 transition-all duration-1000 delay-400 ${
-            isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"
-          }`}
-        >
-          <h3 className="text-lg font-semibold mb-3">Quick Links</h3>
-          <ul className="space-y-2 text-white">
-            <li><Link href="#home" className="hover:text-white">Home</Link></li>
-            <li><Link href="#features" className="hover:text-white">Features</Link></li>
-            <li><Link href="#solution-section" className="hover:text-white">Solutions</Link></li>
-            <li><Link href="#supported-technologies" className="hover:text-white">Technologies</Link></li>
-            <li><Link href="#faq" className="hover:text-white">FAQ</Link></li>
-            <li><Link href="#contact" className="hover:text-white">Contact</Link></li>
-          </ul>
-        </div>
-        {/* Left Side - Logo & Description */}
-        <div
-          className={`max-w-md transition-all duration-1000 delay-200 ${
-            isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-10"
-          }`}
-        >
-          <Image src="/Logo.png" alt="Logo" width={150} height={50} />
-          <p className="mt-4 text-white text-sm">
-            ServerBracket is a web-based hosting control panel that simplifies
-            VPS and dedicated server management. It provides a user-friendly
-            GUI to manage domains, databases, processes, firewalls, cron jobs,
-            and files without requiring command-line knowledge.
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+        <div className="text-center md:text-left flex flex-col justify-center items-center md:items-start gap-2">
+          <Image src={"/Favicon.png"} width={120} height={40} alt="Logo" />
+          <p className="text-white text-xs md:text-sm lg:text-base mt-2">
+            ServerBracket is a simple and powerful hosting panel that allows you
+            to manage domains, databases, firewalls, and server configurations
+            through a user-friendly GUI
           </p>
         </div>
 
+        <nav className="flex space-x-6 text-white text-sm md:text-base">
+          {["Home", "Features", "Pricing", "Contact"].map((item, index) => (
+            <div key={index}>
+              <motion.div
+                whileHover={{ scale: 1.1, color: "#fff" }}
+                transition={{ duration: 0.3 }}
+              >
+                <Link
+                  href={`#${item.toLowerCase()}`}
+                  className="hover:text-white"
+                >
+                  {item}
+                </Link>
+              </motion.div>
+            </div>
+          ))}
+        </nav>
+
+        <div className="flex space-x-4">
+          {[FaFacebook, FaTwitter, FaLinkedin].map((Icon, index) => (
+            <motion.a
+              key={index}
+              whileHover={{ scale: 1.2 }}
+              transition={{ duration: 0.3 }}
+              href="#"
+              className="text-black hover:text-white"
+            >
+              <Icon size={24} />
+            </motion.a>
+          ))}
+        </div>
       </div>
 
-      {/* Bottom Section */}
-      <div className="mt-10 border-t border-gray-700 pt-6 flex flex-col md:flex-row items-center justify-between text-gray-400 text-sm px-6">
-        {/* Social Links */}
-        <div className="flex space-x-6 order-2 md:order-1 mt-4 md:mt-0">
-          <Link href="#"><Facebook className="w-6 h-6 hover:text-white" /></Link>
-          <Link href="#"><Twitter className="w-6 h-6 hover:text-white" /></Link>
-          <Link href="#"><Linkedin className="w-6 h-6 hover:text-white" /></Link>
-          <Link href="#"><Github className="w-6 h-6 hover:text-white" /></Link>
-        </div>
-        {/* Copyright */}
-        <div className="order-1 md:order-2">
-          &copy; {new Date().getFullYear()} ServerBracket. All rights reserved.
-        </div>
+      <div className="border-t border-white mt-6 pt-4 text-center text-sm text-white">
+        &copy; 2025 MyCompany. All rights reserved.
       </div>
-    </footer>
+    </motion.footer>
   );
 };
 

@@ -77,7 +77,7 @@ const CardsCall = () => {
             ref={(el) => {
               if (el) cardRefs.current[index] = el;
             }}
-            className={`rounded-xl transition-all duration-700 ease-in-out transform max-w-[320px] md:max-w-[280px] lg:max-w-[300px] bg-white shadow-sky-900  shadow-md hover:shadow-xl text-center hover:-translate-y-2 ${
+            className={`rounded-xl transition-all duration-700 ease-in-out transform max-w-[320px] md:max-w-[280px] lg:max-w-[300px] bg-white shadow-sky-900  shadow-sm hover:shadow-xl text-center hover:-translate-y-2 ${
               visibleCards.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
             }`}
           >

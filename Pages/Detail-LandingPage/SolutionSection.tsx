@@ -90,7 +90,7 @@ const SolutionSection = () => {
           {solutionData.map(({ id, Icon, title, description, iconColor }, index) => (
             <div
               key={id}
-              className={`bg-white p-6 rounded-lg shadow-black shadow-md text-center text-gray-900 transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
+              className={`bg-white p-6 rounded-lg shadow-black shadow-sm text-center text-gray-900 transform transition-all duration-700 hover:scale-105 hover:shadow-xl ${
                 isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
               }`}
             >
