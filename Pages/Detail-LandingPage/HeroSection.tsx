@@ -62,7 +62,7 @@ const HeroSection = () => {
                 ? "translate-y-0 opacity-100 scale-100"
                 : "translate-y-1/2 opacity-50 scale-95"
             } hover:scale-105 hover:-translate-y-2`}
-            src="/herosection.jpg"
+            src="/dashboard.png"
             alt="ServerBracket Dashboard"
             width={800} // Bigger size
             height={450}
