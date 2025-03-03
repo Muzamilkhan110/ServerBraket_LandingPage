@@ -4,18 +4,8 @@ import {
   FaNodeJs,
   FaPython,
   FaPhp,
-  FaReact,
-  FaJava,
-  FaDocker,
-  FaDatabase,
-  FaGitAlt,
-} from "react-icons/fa"; // Icons for Technologies
+} from "react-icons/fa"; 
 import {
-  SiMongodb,
-  SiPostgresql,
-  SiKubernetes,
-  SiNginx,
-  SiNextdotjs,
   SiFastapi,
   SiDjango,
   SiFlask,
@@ -30,7 +20,6 @@ const technologiesData = [
   { id: 5, Icon: SiDjango, name: "Django", color: "text-green-950" },
   { id: 6, Icon: SiWordpress, name: "Wordpress", color: "text-blue-500" },
   { id: 7, Icon: SiFlask, name: "Flask", color: "text-blue-500" },
-
 ];
 
 const SupportedTechnologies = () => {
@@ -61,12 +50,9 @@ const SupportedTechnologies = () => {
       }`}
     >
       <div className="container mx-auto px-6">
-        {/* 🌟 Section Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
           Supported Technologies
         </h2>
-
-        {/* 📌 Technologies Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 justify-center items-center">
           {technologiesData.map(({ id, Icon, name, color }) => (
             <div

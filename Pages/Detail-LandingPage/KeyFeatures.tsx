@@ -68,12 +68,9 @@ const KeyFeatures = () => {
       }`}
     >
       <div className="container mx-auto px-6">
-        {/* 🌟 Section Title */}
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
           Key Features of ServerBracket
         </h2>
-
-        {/* 📌 Features Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 ">
           {featuresData.map(({ id, Icon, title, description, iconColor }, index) => (
             <div

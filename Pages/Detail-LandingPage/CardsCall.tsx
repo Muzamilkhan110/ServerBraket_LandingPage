@@ -59,7 +59,6 @@ const CardsCall = () => {
 
   return (
     <div className="container-custom mx-auto py-16 font-grotesk">
-      {/* 🏗 Section Heading */}
       <div className="text-center mb-12">
         <h2 className="text-3xl md:text-4xl font-bold text-gray-900">
           Why Traditional CLI is Not Enough?
@@ -68,8 +67,6 @@ const CardsCall = () => {
           ServerBracket solves all CLI-related problems with a modern web UI.
         </p>
       </div>
-
-      {/* 📌 Cards Layout */}
       <div className="flex flex-wrap justify-center gap-6">
         {data.map((item, index) => (
           <div

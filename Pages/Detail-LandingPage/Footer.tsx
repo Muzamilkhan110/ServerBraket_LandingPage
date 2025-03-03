@@ -22,8 +22,8 @@ const Footer = () => {
           </p>
         </div>
 
-        <nav className="flex space-x-6 text-white text-sm md:text-base">
-          {["Home", "Features", "Pricing", "Contact"].map((item, index) => (
+        <nav className="flex space-x-9 text-white text-sm md:text-base">
+          {["Home", "Features", "Solution-Section", "Key-Features" , ].map((item, index) => (
             <div key={index}>
               <motion.div
                 whileHover={{ scale: 1.1, color: "#fff" }}
